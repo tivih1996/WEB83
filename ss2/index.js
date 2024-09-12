@@ -38,25 +38,25 @@ app.get("/users", (req, res) => {
 // //     res.status(200).send(filterUsers)
 // })
 //Bài tập 1
-app.get("/user/:id", (req,res) => {
-    console.log(JSON.stringify(req.params))
-    // res.send(users.filter((item)=> item.id == req.params))
+app.get("/users/:id", (req,res) => {
+    res.send(users.filter(item => item.id === req.params.id))
 })
+//Bài tập 2
 
-// POST
-// body: Gửi dữ liệu phức tạp hơn
-app.post("/users/add-random", (req, res) => {
-    console.log(req.body);
-})
+// // POST
+// // body: Gửi dữ liệu phức tạp hơn
+// app.post("/users/add-random", (req, res) => {
+//     console.log(req.body);
+// })
 
-// PUT/PATCH
-app.put("users/update-user", (req, res) => {
+// // PUT/PATCH
+// app.put("users/update-user", (req, res) => {
 
-})
+// })
 
-// DELETE
-app.delete("/user", (req, res) => {
+// // DELETE
+// app.delete("/user", (req, res) => {
 
-})
+// })
 
 
