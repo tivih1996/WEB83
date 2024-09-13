@@ -1,5 +1,7 @@
 import express from 'express';
 import { users } from './data.js';
+import validator from 'validator';
+import { v4 as uuidv4 } from 'uuid';
 const app = express();
 
 app.listen(8080, () => {
@@ -38,11 +40,55 @@ app.get("/users", (req, res) => {
 // //     res.status(200).send(filterUsers)
 // })
 //Bài tập 1
-app.get("/users/:id", (req,res) => {
+app.get("/users/:id", (req, res) => {
     res.send(users.filter(item => item.id === req.params.id))
 })
 //Bài tập 2
+app.post("/users/create", (req, res) => {
+    const { userName, email, age, avatar } = req.body
 
+    // kiểm tra user
+    if (!userName) {
+        var messageUser = "Please enter a username"
+    } else {
+        //kiểm tra user name đã tồn tại
+        const isUserNameExit = users.some(user => user.userName === userName)
+        isUserNameExit ? messageUser = "User đã tồn tại" : messageUser = "ok"
+    }
+
+
+    // kiểm tra email
+    if (!email) {
+        var messageEmail = "Please enter email"
+    }else{
+        validator.isEmail(email) === false ? messageEmail = "Email không đúng định dạng" : messageEmail = "ok"
+    }
+
+
+    // gửi  message
+   
+    const message = { messageUser, messageEmail }
+    const isMessageOk = Object.values(message).every((value => value ==="ok"))
+     if(isMessageOk){
+        var stt =  200
+        let newUser = { 
+            id: uuidv4(),
+            userName, email, age, avatar
+        }
+        users.push(newUser)
+     }else{
+        stt = 400
+     }
+
+     const data = {message, users}
+    res.status(stt).send( data)
+
+    // if (validator.isEmail(email) === false){
+    //     res.status(400).send({
+    //         message: "Invalid email address"
+    //     })
+    // }
+})
 // // POST
 // // body: Gửi dữ liệu phức tạp hơn
 // app.post("/users/add-random", (req, res) => {
