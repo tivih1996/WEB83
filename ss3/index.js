@@ -81,6 +81,7 @@ app.post("/users/create", (req, res) => {
      }
 
      const data = {message, users}
+     console.log("tín hiệu",isMessageOk ? "good" : "fail" )
     res.status(stt).send( data)
 
     // if (validator.isEmail(email) === false){
