@@ -1,5 +1,5 @@
 import express from 'express';
-import { users } from './data.js';
+import { users, posts } from './data.js';
 import validator from 'validator';
 import { v4 as uuidv4 } from 'uuid';
 const app = express();
@@ -107,3 +107,35 @@ app.post("/users/create", (req, res) => {
 // })
 
 
+/////////////////////////////////////////////////////////
+
+//update data
+app.post("/users/jsonserver/updatedata", async (req, res) => {
+    
+    // async/await 
+   
+    try {
+        for(let i = 0; i < users.length; i++){
+            const response = await fetch("http://localhost:3000/users", {
+                method: "POST",
+                "content-type": "application/json",
+                body: JSON.stringify(users[i])
+            })          
+
+        }
+        
+        for(let i = 0; i < posts.length; i++){
+            const response = await fetch("http://localhost:3000/posts", {
+                method: "POST",
+                "content-type": "application/json",
+                body: JSON.stringify(posts[i])
+            })          
+
+        }
+       res.status(200).send( users )
+    } catch (err) {
+        // Bắn lỗi vào 1 nơi nào đó => Xử lý lỗi 
+
+        res.status(500).send(err)
+    }
+})

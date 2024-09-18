@@ -1,8 +1,105 @@
 {
-    "users": [
-       
-    ],
-    "posts":[
-        
-    ]
+  "users": [
+    {
+      "id": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "userName": "Nobita",
+      "email": "nobita@japanese.com",
+      "age": 5,
+      "avatar": "https://i.kym-cdn.com/photos/images/original/000/985/256/d51.png"
+    },
+    {
+      "id": "6257644e-94f2-45fc-9803-fc862df55eaa",
+      "userName": "Doraemon",
+      "email": "doraemon@nobita.com",
+      "avatar": "https://i.pinimg.com/736x/11/e4/4d/11e44d85743b28fa62121b5ae71a914b.jpg"
+    },
+    {
+      "id": "e7a88219-c265-44b4-ba02-1d2571ee4173",
+      "userName": "Suneo",
+      "email": "suneo@jaien.com",
+      "avatar": "https://ecdn.game4v.com/g4v-content/uploads/2023/05/19100155/Suneo-2-game4v-1684465314-94.jpg"
+    }
+  ],
+  "posts": [
+    {
+      "id": "856d",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "d051b29e-d9c5-4cb1-89bf-38b31aef05f1",
+      "content": "Chào mọi người!",
+      "createdAt": "2023-09-22T12:30:00.000Z",
+      "isPublic": true
+    },
+    {
+      "id": "7181",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "cfcc73cd-5297-48a4-8d3a-2282a30a8c7a",
+      "content": "Tôi đã tìm thấy một quyển sách tuyệt vời để đọc.",
+      "createdAt": "2023-09-22T12:31:00.000Z",
+      "isPublic": false
+    },
+    {
+      "id": "8955",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "86c961d8-0edc-4c59-a048-3f192a0e7ea3",
+      "content": "Hôm nay thời tiết tuyệt vời!",
+      "createdAt": "2023-09-22T12:32:00.000Z",
+      "isPublic": true
+    },
+    {
+      "id": "81ab",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "e12a04e0-6b3b-4d6a-9f2d-60ebd21dbf3d",
+      "content": "Cuối tuần tới, tôi sẽ tham gia một sự kiện thú vị.",
+      "createdAt": "2023-09-22T12:33:00.000Z",
+      "isPublic": false
+    },
+    {
+      "id": "0114",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "40b8d24e-70a5-4f75-8f71-0905b8e197cf",
+      "content": "Yêu mọi người!",
+      "createdAt": "2023-09-22T12:34:00.000Z",
+      "isPublic": true
+    },
+    {
+      "id": "d08b",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "3b8d6e1a-7601-43c3-9264-1f3653a1e5c9",
+      "content": "Chúc mọi người cuối tuần vui vẻ!",
+      "createdAt": "2023-09-22T12:35:00.000Z",
+      "isPublic": true
+    },
+    {
+      "id": "02f4",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "5f508d8e-407b-4b41-8ff2-e727590aaf5d",
+      "content": "Làm điều tốt cho ngày hôm nay!",
+      "createdAt": "2023-09-22T12:36:00.000Z",
+      "isPublic": true
+    },
+    {
+      "id": "dd15",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "1d8b6e16-c01a-4c80-8924-2bf9f5a548cc",
+      "content": "Chia sẻ niềm vui!",
+      "createdAt": "2023-09-22T12:37:00.000Z",
+      "isPublic": true
+    },
+    {
+      "id": "1313",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "1b2b8c16-32ca-4e5a-9866-9df098c5e144",
+      "content": "Hãy yêu đến mức bạn có thể!",
+      "createdAt": "2023-09-22T12:38:00.000Z",
+      "isPublic": true
+    },
+    {
+      "id": "f647",
+      "userId": "9fceb585-042f-4f10-9cb5-37c529d93166",
+      "postId": "4e5c8d1f-30a8-4d88-832e-79fb6d6a2cf1",
+      "content": "Hãy sống với niềm đam mê!",
+      "createdAt": "2023-09-22T12:39:00.000Z",
+      "isPublic": true
+    }
+  ]
 }
